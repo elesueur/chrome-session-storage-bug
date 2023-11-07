@@ -21,3 +21,17 @@ node server.js &
 node redirect-server.js
 ```
 
+To observe the issue, open Chrome, open a new tab, and paste http://localhost:4900
+You should see
+
+"welcome back: blerg"
+
+printed to the screen if things worked.
+
+If things _don't_ work, i.e. the bug is reproduced, you will see
+
+"welcome back: null"
+
+To trigger the issue, you need to open multiple tabs and paste the http://localhost:4900
+and press return. Usually I can see it after one or two tabs are open. Sometimes I see
+it happen on the very first tab I open.

@@ -18,7 +18,9 @@
             } else {
                 document.write("BLERG");
             }
-            //fetch("https://localhost.vmware.com:4900/test?value=" + window.sessionStorage.getItem('test'));
+            // Uncomment this to see the value of the session storage printed in the backend log
+            // but note, with this code executing, the bug seems not to reproduce.
+            //fetch("http://localhost:4900/test?value=" + window.sessionStorage.getItem('test'));
         } else {
             document.write('welcome back: ' + window.sessionStorage.getItem('test'));
             window.history.pushState({}, document.title, window.location.pathname);

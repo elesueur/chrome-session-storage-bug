@@ -19,5 +19,5 @@ app.get("/test", (req, res) => {
 });
 
 server.listen(4900, function () {
-    console.log("The sample is now available at http://localhost.vmware.com:4900");
+    console.log("The sample is now available at http://localhost:4900");
 });

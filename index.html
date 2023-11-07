@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Chrome Session Storage Bug Reproduction</title>
+  <base href="/">
+    <script language="JavaScript">
+        console.log('current value: ' + window.sessionStorage.getItem('test'));
+
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.get("redirected") !== "true") {
+            console.log("redirecting ...");
+            window.sessionStorage.setItem('test', 'blerg');
+            const value = window.sessionStorage.getItem("test")
+            if (value === "blerg") {
+                window.location.href = "http://localhost.vmware.com:4901/from";
+            } else {
+                document.write("BLERG");
+            }
+            //fetch("https://localhost.vmware.com:4900/test?value=" + window.sessionStorage.getItem('test'));
+        } else {
+            document.write('welcome back: ' + window.sessionStorage.getItem('test'));
+            window.history.pushState({}, document.title, window.location.pathname);
+            //window.sessionStorage.clear();
+        }
+    </script>
+</head>
+
+<body>
+</body>
+</html>

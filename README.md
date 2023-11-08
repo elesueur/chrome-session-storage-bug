@@ -17,6 +17,7 @@ Upon loading app 1 in a new tab, sometimes the value "null" is written to the sc
 of the value "blerg" which was written to session storage before redirecting.
 
 ```
+npm install
 node server.js &
 node redirect-server.js
 ```

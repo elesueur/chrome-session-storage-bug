@@ -37,4 +37,4 @@ To trigger the issue, you need to open multiple tabs and paste the http://localh
 and press return. Usually I can see it after one or two tabs are open. Sometimes I see
 it happen on the very first tab I open.
 
-[1] https://github.com/elesueur/chrome-session-storage-bug
+[1] https://bugs.chromium.org/p/chromium/issues/detail?id=1500397

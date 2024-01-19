@@ -1,4 +1,4 @@
-This repository contains a minimal reproduction of an issue relating to persistence
+This repository contains a minimal reproduction of an issue [1] relating to persistence
 of session storage in Chrome during redirect to a third-party application and returning
 to the originating application which had written something to session storage immediately
 prior to triggering the redirect.
@@ -36,3 +36,5 @@ If things _don't_ work, i.e. the bug is reproduced, you will see
 To trigger the issue, you need to open multiple tabs and paste the http://localhost:4900
 and press return. Usually I can see it after one or two tabs are open. Sometimes I see
 it happen on the very first tab I open.
+
+[1] https://github.com/elesueur/chrome-session-storage-bug
